@@ -1,4 +1,4 @@
-import profilePic from "../assets/profile.png"
+import profilePic from "../assets/profile.JPG"
 
 function AboutMe() {
   const skills = [
