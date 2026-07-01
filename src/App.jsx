@@ -13,7 +13,7 @@ import wall2 from './assets/Whatsapp2.jpeg'
 import wall3 from './assets/Whatsapp3.jpeg'
 import wall4 from './assets/Whatsapp4.jpeg'
 import wall5 from './assets/Whatsapp5.jpeg'
-import wall6 from './assets/Whatsapp6.jpeg'
+
 
 function App() {
   const [openWindows, setOpenWindows] = useState([]);
@@ -26,7 +26,7 @@ function App() {
   const [activeWindow, setActiveWindow] = useState(null);
   const [booting, setBooting] = useState(true);
 
-  const wallpapers = [wall1, wall2, wall3, wall4, wall5, wall6];
+  const wallpapers = [wall1, wall2, wall3, wall4, wall5];
 
   useEffect(() => {
     const timer = setTimeout(() => setBooting(false), 2500);
@@ -98,6 +98,7 @@ function App() {
           onClose={() => closeWindow("About Me")}
           isActive={activeWindow === "About Me"}
           onFocus={() => setActiveWindow("About Me")}
+          darkMode={darkMode}
         >
           <AboutMe />
         </Window>
@@ -109,6 +110,7 @@ function App() {
           onClose={() => closeWindow("Projects")}
           isActive={activeWindow === "Projects"}
           onFocus={() => setActiveWindow("Projects")}
+          darkMode={darkMode}
         >
           <Projects />
         </Window>
@@ -120,6 +122,7 @@ function App() {
           onClose={() => closeWindow("Contact")}
           isActive={activeWindow === "Contact"}
           onFocus={() => setActiveWindow("Contact")}
+          darkMode={darkMode}
         >
           <Contact />
         </Window>
@@ -131,6 +134,7 @@ function App() {
           onClose={() => closeWindow("Resume")}
           isActive={activeWindow === "Resume"}
           onFocus={() => setActiveWindow("Resume")}
+          darkMode={darkMode}
         >
           <Resume />
         </Window>

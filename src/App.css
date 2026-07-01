@@ -1,9 +1,9 @@
 .desktop {
   height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
+  position: relative;
   overflow: hidden;
+  padding-top: 28px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -176,6 +176,7 @@
 .window-controls {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .window-dot {
@@ -184,6 +185,7 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .window-dot.close { background: #ff5f57; }
@@ -647,17 +649,17 @@
 @keyframes windowOpen {
   from {
     opacity: 0;
-    transform: scale(0.85);
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
 .window {
-  animation: windowOpen 0.2s ease forwards;
+  animation: windowOpen 0.15s ease forwards;
 }
+
+
 
 
 
@@ -726,4 +728,132 @@
 @keyframes bootLoad {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+
+
+
+
+.window-dot.close { 
+  background: #ff5f57 !important; 
+}
+.window-dot.minimize { 
+  background: #febc2e !important; 
+}
+.window-dot.maximize { 
+  background: #28c840 !important; 
+}
+
+
+
+
+/* Dark mode window */
+.window.window-dark {
+  background: rgba(30, 30, 30, 0.97) !important;
+  color: #f0f0f0 !important;
+}
+
+.window.window-dark .window-titlebar {
+  background: #2a2a2a !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.window.window-dark .window-title {
+  color: #dddddd !important;
+}
+
+.window.window-dark .window-content {
+  color: #f0f0f0 !important;
+}
+
+.window.window-dark h2,
+.window.window-dark h3,
+.window.window-dark p,
+.window.window-dark span,
+.window.window-dark li {
+  color: #f0f0f0 !important;
+}
+
+.window.window-dark .resume-section h3 {
+  color: #7eb3ff !important;
+  border-left-color: #7eb3ff !important;
+}
+
+.window.window-dark .skill-tag {
+  background: rgba(124, 92, 252, 0.2) !important;
+  color: #b39dff !important;
+}
+
+.window.window-dark .project-card {
+  background: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #f0f0f0 !important;
+}
+
+.window.window-dark .project-card:hover {
+  border-color: #7eb3ff !important;
+}
+
+.window.window-dark .contact-field input,
+.window.window-dark .contact-field textarea {
+  background: #1e1e1e !important;
+  border-color: #444 !important;
+  color: #f0f0f0 !important;
+}
+
+
+.window.window-light {
+  background: rgba(255, 255, 255, 0.97) !important;
+  color: #1a1a1a !important;
+}
+
+.window.window-light .window-titlebar {
+  background: #e8e8ea !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+.window.window-light .window-title {
+  color: #444 !important;
+}
+
+.window.window-light .window-content {
+  color: #1a1a1a !important;
+}
+
+
+.window-dot.close { background: #ff5f57 !important; }
+.window-dot.minimize { background: #febc2e !important; }
+.window-dot.maximize { background: #28c840 !important; }
+
+
+
+
+
+/* TRAFFIC LIGHT DOTS - must be last */
+span.window-dot.close { 
+  background-color: #ff5f57 !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+span.window-dot.minimize { 
+  background-color: #febc2e !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+span.window-dot.maximize { 
+  background-color: #28c840 !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
 }
