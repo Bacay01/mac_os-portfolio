@@ -2,8 +2,11 @@ import profilePic from "../assets/profile.JPG"
 
 function AboutMe() {
   const skills = [
-    "JavaScript", "React", "Node.js", "Express",
-    "MongoDB", "Mongoose", "JWT Auth", "REST APIs",
+    "Frontend:   React, Vite, HTML, CSS, JavaScript",
+"Backend:    Node.js, Express, MongoDB, Mongoose",
+"Auth:       JWT, bcrypt, REST APIs",
+"Tools:      Git, GitHub, Postman, VS Code",
+"Engineering: AutoCAD, Technical Report Writing",
   ];
 
   return (
@@ -13,15 +16,17 @@ function AboutMe() {
       <h2>Hi, I'm Bakare Samuel Adebisi 👋</h2>
 
       <p>
-        I'm a full-stack JavaScript developer, currently in Level 4 at SQI.
-        I build with the MERN stack — React on the frontend, Express and
-        MongoDB on the backend.
+        I'm a Graduate Mechanical Engineer (2:1, LAUTECH) now 
+        transitioning into full-stack software development. 
+        Currently in Level 4 at SQI College of ICT, building 
+        production-ready web applications with the MERN stack.
       </p>
 
       <p>
-        This portfolio is built like a desktop OS — every window you're
-        clicking through right now is a real React component, draggable
-        and resizable, just like this one.
+       This portfolio is itself a full React application styled 
+        like a macOS desktop — every window you're clicking through 
+        is a real draggable, resizable React component built from 
+        scratch.
       </p>
 
       <h3>Skills</h3>

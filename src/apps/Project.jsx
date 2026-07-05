@@ -11,6 +11,7 @@ function Projects() {
     "Todo-list",
     "go-daddy",
     "Grading-system",
+    "mac_os-portfolio",
   ];
 
   useEffect(() => {
